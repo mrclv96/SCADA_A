@@ -68,6 +68,7 @@ namespace SCADA_A.Datos
         public DbSet<ProductCostV> ProductCostVs { get; set; }
         public DbSet<Protocol> Protocols { get; set; }
         public DbSet<SkidProtocol> SkidProtocols { get; set; }
+        public DbSet<OrderPV> OrderPVs{ get; set; }
 
         public DbContextSCADA_A(DbContextOptions<DbContextSCADA_A> options) : base(options)
         {
@@ -120,6 +121,7 @@ namespace SCADA_A.Datos
             modelBuilder.ApplyConfiguration(new ProductCostVMap());
             modelBuilder.ApplyConfiguration(new ProtocolMap());
             modelBuilder.ApplyConfiguration(new SkidProtocolMap());
+            modelBuilder.ApplyConfiguration(new OrderPVMap());
 
 #pragma warning disable CS0618 // Type or member is obsolete
             modelBuilder.Ignore<ResultGOODSBOMbuscarfascia>(); //ignore create the table for the stored procedure

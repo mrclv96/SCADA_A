@@ -6,7 +6,6 @@ namespace SCADA_A.Web.Models.ProduccionPintura.SkidProtocol
     {
         public int LabelID { get; set; }
         public string OrderName { get; set; }
-        public string OrderRef { get; set; }
         public long Skid_Number { get; set; }
         public long Skid_Serial_Number { get; set; }
         public short Position { get; set; }
@@ -24,5 +23,6 @@ namespace SCADA_A.Web.Models.ProduccionPintura.SkidProtocol
         public bool Flaming { get; set; }
         public bool Basecoat { get; set; }
         public DateTime DateAndTimeIN { get; set; }
+        public string Comment { get; set; }
     }
 }

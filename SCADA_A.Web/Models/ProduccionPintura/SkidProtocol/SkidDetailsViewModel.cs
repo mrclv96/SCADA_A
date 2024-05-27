@@ -1,19 +1,25 @@
-﻿namespace SCADA_A.Web.Models.ProduccionPintura.SkidProtocol
+﻿using System;
+
+namespace SCADA_A.Web.Models.ProduccionPintura.SkidProtocol
 {
     public class SkidDetailsViewModel
     {
+        public DateTime DateAndTimeIN { get; set; }
         public int LabelID { get; set; }
+        public string TypeLab { get; set; }
         public short Position { get; set; }
+        public bool PartSide1 { get; set; }
+        public bool PartSide2 { get; set; }
+        public bool? BypassOnlChgCO2FL { get; set; }
+        public bool? BypassOnlChgPR { get; set; }
+        public bool? BypassOnlChgBC { get; set; }
+        public bool? BypassOnlChgCC { get; set; }
         public bool? FlagR1 { get; set; }
         public bool? FlagR2 { get; set; }
         public bool? FlagR3 { get; set; }
         public bool? FlagR4 { get; set; }
         public bool? FlagR5 { get; set; }
         public bool? FlagR6 { get; set; }
-        public bool? BypassOnlChgCO2FL { get; set; }
-        public bool? BypassOnlChgPR { get; set; }
-        public bool? BypassOnlChgBC { get; set; }
-        public bool? BypassOnlChgCC { get; set; }
         public double? ResinR1 { get; set; }
         public double? ResinR2 { get; set; }
         public double? ResinR3 { get; set; }
@@ -40,6 +46,5 @@
         public double? CO2_R2 { get; set; }
         public double? TempBooth { get; set; }
         public double? HumBoothCC { get; set; }
-        public double? TempOvenCC { get; set; }
     }
 }
